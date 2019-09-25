@@ -3,19 +3,15 @@
 ---
 
 
-This tutorial presents a novel measure of seismogram similarity that is explicitly invariant to path. The work is based on the paper "Beyond Correlation: A Path-Invariant Measure for Seismogram Similarity" by Joshua Dickey, Brett Borghetti, William Junek and Richard Martin, which can be viewed in full on the ArXiv: https://arxiv.org/pdf/1904.07936.pdf.
+This repository presents a novel measure of seismogram similarity that is explicitly invariant to path. The work is based on the paper "Beyond Correlation: A Path-Invariant Measure for Seismogram Similarity" by Joshua Dickey, Brett Borghetti, William Junek and Richard Martin, which can be viewed in full on the ArXiv: https://arxiv.org/pdf/1904.07936.pdf.
 
-The tutorial consists of 5 parts:
+This repository contains three parts:
 
-1) Background
+1) SeisSim.ipynb - This Jupyter Notebook explores the application of our trained similarity model to the test set. To run this notebook, simply clone this directory onto your machine. No GPU is required.
 
-2) Data Exploration
+2) Downloader.py - This program will download both the catalogs and waveforms necesssary to train and test a seismic similarity model. The catalogs are downloaded through a web query of the International Seismological Centre (ISC) Bulletin for seismic arrivals: http://www.isc.ac.uk/iscbulletin/search/arrivals/; and the waveforms are downloaded from the Incorporated Research Institutions for Seismology (IRIS) Database using ObsPy. This process may take several days, even with a fast internet connection.
 
-3) Similarity Model
-
-4) Pairwise Association
-
-5) Template-based Discrimination
+3) Trainer.py - This program will train a similarity model and save it to disk.
 
 ---
 ### BACKGROUND
