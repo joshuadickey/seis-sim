@@ -7,11 +7,11 @@ This repository presents a novel measure of seismogram similarity that is explic
 
 This repository contains three parts:
 
-1) SeisSim.ipynb - This Jupyter Notebook explores the application of our trained similarity model to the test set. To run this notebook, simply clone this directory onto your machine. No GPU is required.
+1) __SeisSim.ipynb__ - This Jupyter Notebook explores the application of our trained similarity model to the test set. To run this notebook, simply clone this directory onto your machine. No GPU is required.
 
-2) Downloader.py - This program will download both the catalogs and waveforms necesssary to train and test a seismic similarity model. The catalogs are downloaded through a web query of the International Seismological Centre (ISC) Bulletin for seismic arrivals: http://www.isc.ac.uk/iscbulletin/search/arrivals/; and the waveforms are downloaded from the Incorporated Research Institutions for Seismology (IRIS) Database using ObsPy. This process may take several days, even with a fast internet connection.
+2) __Downloader.py__ - This program will download both the catalogs and waveforms necesssary to train and test a seismic similarity model. The catalogs are downloaded through a web query of the International Seismological Centre (ISC) Bulletin for seismic arrivals: http://www.isc.ac.uk/iscbulletin/search/arrivals/; and the waveforms are downloaded from the Incorporated Research Institutions for Seismology (IRIS) Database using ObsPy. This process may take several days, even with a fast internet connection.
 
-3) Trainer.py - This program will train a similarity model and save it to disk.
+3) __Trainer.py__ - This program will train a similarity model and save it to disk.
 
 ---
 ### BACKGROUND
