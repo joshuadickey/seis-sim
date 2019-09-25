@@ -28,11 +28,11 @@ The figure shows three Seismograms, each depicting an explosion at a coal mine n
 
 #### Path-Invariant Similarity:
 
-We now envision a new measure of seismogram similarity, that is path-independant. The notional diagram below illustrates an embedding function, $f(\cdot)$, which is a non-linear transformation that maps time-series seismograms to low-dimensional embeddings. The mappings are desired to be path-invariant and source-specific, such that regardless of the recording station, all seismograms associated with a particular event are mapped closely in the embedding space, and seismograms not associated with that event have more distant embeddings. We propose to learn such an embedding function explicitly, using a specialized convolutional neural network architecture, called a triplet network.
+We now envision a new measure of seismogram similarity, that is path-independant. The notional diagram below illustrates an embedding function, f(.), which is a non-linear transformation that maps time-series seismograms to low-dimensional embeddings. The mappings are desired to be path-invariant and source-specific, such that regardless of the recording station, all seismograms associated with a particular event are mapped closely in the embedding space, and seismograms not associated with that event have more distant embeddings. We propose to learn such an embedding function explicitly, using a specialized convolutional neural network architecture, called a triplet network.
 
 <img src="images/STA_dominant_similarity.png" width="400px">
 
-The Triplet Network is trained on batches of $m$ triples, where each triple is comprised of an anchor object, $X_A^{(i)}$, a positive object, X_P^{(i)}, and a negative object, X_N^{(i)}. The triplet loss function computes the relative embedding distance between the matched pair and non-matched pair, and loss is accrued whenever the matched pair distance is not smaller than the non-matched distance by some margin.
+The Triplet Network is trained on batches of $m$ triples, where each triple is comprised of an anchor object, X_A^(i), a positive object, X_P^(i), and a negative object, X_N^(i). The triplet loss function computes the relative embedding distance between the matched pair and non-matched pair, and loss is accrued whenever the matched pair distance is not smaller than the non-matched distance by some margin.
 
 To learn path-invariant embeddings, we simply pick our triples such that the anchor and positive objects are seismograms sharing the same source event, but recorded at different stations. In this way, the network learns a transformation that is invariant to path, calibration function, recording equipment and station.
 
