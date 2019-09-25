@@ -37,3 +37,17 @@ The Triplet Network is trained on batches of $m$ triples, where each triple is c
 To learn path-invariant embeddings, we simply pick our triples such that the anchor and positive objects are seismograms sharing the same source event, but recorded at different stations. In this way, the network learns a transformation that is invariant to path, calibration function, recording equipment and station.
 
 
+---
+### SIMILARITY MODEL
+The goal is to learn a path-invariant embedding function for seismograms, useful for source discrimination at up to regional distances. This is accomplished using a hybrid architecture with two distinct parts: First, a TCN is employed with a receptive field wide enough to capture both P and S wave phases; second, a densely connected output layer, with 32 nodes, is employed to facilitate a rich low-dimensional embedding space. 
+
+The TCN is designed to have an overall receptive field of 4171 samples (104 seconds), allowing it to learn long-period features down to 0.01 Hz, with just four dilated convolutional layers, as shown in the Table below:
+
+<img src="images/TCN_parameters.png" width="200px">
+
+The TCN architecture consists of two residual stacks, each with 50 filters and a kernel size (filter length) of 16 samples. Finally, the TCN output is encoded by a densely connected output layer with 32 nodes, and the final output vector is normalized to have unit length. This results in 553,835 trainable parameters, and a network which reduces the three-channel 21,600 dimensional input into just 32 dimensions, for a 99.9\% reduction in dimensionality.
+
+<img src="images/TCN_stack_sim.png" width="400px">
+
+
+
