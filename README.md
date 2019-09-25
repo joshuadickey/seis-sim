@@ -11,7 +11,7 @@ This repository contains three parts:
 
 2) __Downloader.py__ - This program will download both the catalogs and waveforms necesssary to train and test a seismic similarity model. The catalogs are downloaded through a web query of the International Seismological Centre (ISC) Bulletin for seismic arrivals: http://www.isc.ac.uk/iscbulletin/search/arrivals/; and the waveforms are downloaded from the Incorporated Research Institutions for Seismology (IRIS) Database using ObsPy. This process may take several days, even with a fast internet connection.
 
-3) __Trainer.py__ - This program will train a similarity model and save it to disk.
+3) __Trainer.py__ - This program will train a similarity model and save it to disk. It is suggested to have at least a TitanV GPU and 64GB of System RAM.
 
 ---
 ### BACKGROUND
