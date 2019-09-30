@@ -3,7 +3,7 @@
 ---
 
 
-This repository presents a novel measure of seismogram similarity that is explicitly invariant to path. The work is based on the paper _"Beyond Correlation: A Path-Invariant Measure for Seismogram Similarity"_ by Joshua Dickey, Brett Borghetti, William Junek and Richard Martin, which can be viewed in full on the ArXiv: https://arxiv.org/pdf/1904.07936.pdf.
+This repository presents a novel seismogram similarity measure that is explicitly invariant to path. The work is based on the paper _"Beyond Correlation: A Path-Invariant Measure for Seismogram Similarity"_ by Joshua Dickey, Brett Borghetti, William Junek and Richard Martin, which can be viewed in full on the ArXiv: https://arxiv.org/pdf/1904.07936.pdf.
 
 This repository contains three parts:
 
