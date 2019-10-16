@@ -1241,7 +1241,7 @@ def residual_by_dist(assoc_cat, samp_size=350, dist_interval=250, dist_bins=9):
         print(f'{dist_min:04d}-{dist_max:04d} km\t{precis:.3f}\t{recall:.3f}\t{accury:.3f}')
 
 
-def get_emb(dataset_name, model_id, use_provided_emb=False, data_folder='data/'):
+def get_emb(dataset_name, model_id, use_provided_emb=False, data_folder='data/datasets/'):
 
     pdict = {}
     pdict['iniW'] = model_id
@@ -1261,7 +1261,7 @@ def get_emb(dataset_name, model_id, use_provided_emb=False, data_folder='data/')
 
     else:
         print('\nloading waveforms...', end=' ', flush=True)
-        dat = np.load(os.path.join(data_folder, f'DAT_{dataset_name}.npy'))[:, st:en, :]
+        dat = np.load(os.path.join(data_folder, f'X_{dataset_name}.npy'))[:, st:en, :]
 
         if pdict['dtrd']:
             print('detrending...', end=' ', flush=True)
